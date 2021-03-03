@@ -67,7 +67,12 @@ Hardware Overview
 Block Overview
 --------------------------
 
-Quelle: https://tech.microbit.org/hardware/#hardware-block-diagram
+The target of all debugging is the central MCU **NRF52833**
+running the software. The main CPU is debugged using a
+SWD/CMSIS-DAP/JLink connection controlled by the **KL27Z**
+chip communication itself over USB to the PC/OpenOCD/GDB.
 
 .. image:: images/microbit-hardware-v2-block.svg
    :width: 800 px
+
+Source: https://tech.microbit.org/hardware/#hardware-block-diagram
