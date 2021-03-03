@@ -14,6 +14,8 @@ This repository shall explore the possibilities to debug the BBC microbit v2.
 1. With Arduino
 1. With MakeCode (fka PXT)
 
+
+
 Debugging with CODAL
 ----------------------
 
@@ -30,9 +32,12 @@ Build the software:
 
 
 Debugging with PlatformIO
--------------------------
+--------------------------
 
+PlatformIO supports the debugging over the "DAP-Link" interface from 
+* https://docs.platformio.org/en/latest/boards/nordicnrf51/bbcmicrobit.html
 
-Debugging with PlatformIO
--------------------------
+Debugging with Arduino
+-----------------------
+
 
