@@ -1,17 +1,38 @@
- @startuml
-component "BBC Micro:Bit" {
-"Main-MCU" as MBMCU {
-[Software]
-}
-[Debug-CPU] as MBUSB
+@startuml
+
+component "BBC Micro:Bit" as MicroBit {
+  component "Main-MCU" <<nRF82533>> as MBMCU {
+    file "program.bin" as Software <<ARM Thumb>>
+  }
+  component "Debug-CPU" <<KL27Z>> as MBUSB {
+    file "program.hex" as Firmware
+  }
+  ' MBUSB -> MBMCU : "SWD/JTAG"
+  Firmware -> Software
 }
 
 component PC {
-  component OpenOCD
-  component GDB
+  ' component "Visual Code" as VC {
+    component PlatformIO <<IDE>>
+  ' }
+  component Arduino    <<IDE>>
+  component OpenOCD <<On-Chip Debugger>>
+  component "Source"   <<C-Code>>{
+    file "CODAL-CORE"
+    file "CODAL-NRF52"
+  }
+  component "arm-eabi-none-gdb" as GDB <<Debugger>>
+  component "arm-eabi-none-gcc" as GCC <<Compiler>>
+  component Make
+  component CMAKE
+  PlatformIO --> GDB
+  GDB         -> OpenOCD
+  Arduino    --> OpenOCD
+  CMAKE -> Make : Generate Makefile
+  Make -> GCC : "With -g"
+  GCC  --> Firmware : produces
 }
-PlatformIO -> GDB
-GDB -> OpenOCD
-OpenOCD -> MBUSB
-MBUSB -> Software
+Source --> GCC
+Source --> GDB
+OpenOCD -> MBUSB : USB
 @enduml
