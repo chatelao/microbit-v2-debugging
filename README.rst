@@ -15,8 +15,7 @@ This repository shall explore the possibilities to debug the BBC microbit v2.
 1. With MakeCode (fka PXT)
 
 .. image:: images/microbit-hardware-v2-block.svg
-   :width: 600 px
-  
+ 
 
 Debugging with CODAL
 ----------------------
