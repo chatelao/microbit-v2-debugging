@@ -14,8 +14,6 @@ This repository shall explore the possibilities to debug the BBC microbit v2.
 1. With Arduino
 1. With MakeCode (fka PXT)
 
-.. image:: images/microbit-hardware-v2-block.svg
- 
 
 Debugging with CODAL
 ----------------------
@@ -52,4 +50,13 @@ PlatformIO supports the debugging over the "DAP-Link" interface from
 Debugging with Arduino
 -----------------------
 
+Appendix
+##########################
 
+Hardware Overview
+--------------------------
+
+Block Overview
+--------------------------
+.. image:: images/microbit-hardware-v2-block.svg
+   :width: 800 px
