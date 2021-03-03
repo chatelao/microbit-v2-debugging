@@ -13,7 +13,7 @@ Overview of the hardware capabilities
 --------------------------------------
 
 .. image:: images/cmsis-dap.png
-   :width: 800 px
+   :width: 200 px
 
 1. With CODAL
 1. With PlatformIO
