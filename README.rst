@@ -9,8 +9,7 @@ BBC Micro:Bit v2 Debugging
 
 This repository shall explore the possibilities to debug the BBC microbit v2.
 
-
-![example-uml](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/chatelao/microbit-v2-debugging/master/images/overview.iuml)
+.. image:: http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/chatelao/microbit-v2-debugging/master/images/overview.iuml
 
 Overview of the hardware capabilities
 --------------------------------------
