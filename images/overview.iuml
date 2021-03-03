@@ -1,0 +1,10 @@
+ @startuml
+component "MicroBit Main-MCU" as MBMCU
+[MicroBit Debug-CPU] as MBUSB
+component PC {
+  component OpenOCD
+  component GDB
+}
+PC -> MBUSB
+MBUSB -> MBMCU
+@enduml
