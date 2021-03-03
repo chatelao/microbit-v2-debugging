@@ -58,5 +58,8 @@ Hardware Overview
 
 Block Overview
 --------------------------
+
+Quelle: https://tech.microbit.org/hardware/#hardware-block-diagram
+
 .. image:: images/microbit-hardware-v2-block.svg
    :width: 800 px
