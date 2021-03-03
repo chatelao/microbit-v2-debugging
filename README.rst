@@ -24,13 +24,24 @@ Get the sources:
 
    git clone https://github.com/chatelao/microbit-v2-samples-vagrant
 
-Build the software:
+Build the software (Standard):
 ::
 
    cd microbit-v2-samples
    python build.py
 
+In utils/python/codal_utils.py about the build logic called is found here:
+::
 
+   cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo -G \"Unix Makefiles\"
+
+So a manual run can be started this way:
+::
+
+   cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles"
+   make clean
+   make -j 10 VERBOSE=1
+   
 Debugging with PlatformIO
 --------------------------
 
