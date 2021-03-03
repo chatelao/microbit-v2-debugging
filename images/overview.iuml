@@ -1,8 +1,11 @@
  @startuml
-component "MicroBit Main-MCU" as MBMCU {
+component "BBC Micro:Bit" {
+"Main-MCU" as MBMCU {
 [Software]
 }
-[MicroBit Debug-CPU] as MBUSB
+[Debug-CPU] as MBUSB
+}
+
 component PC {
   component OpenOCD
   component GDB
