@@ -17,6 +17,18 @@ This repository shall explore the possibilities to debug the BBC microbit v2.
 Debugging with CODAL
 ----------------------
 
+Get the sources:
+::
+
+   git clone https://github.com/chatelao/microbit-v2-samples-vagrant
+
+Build the software:
+::
+
+   cd microbit-v2-samples
+   python build.py
+
+
 Debugging with PlatformIO
 -------------------------
 
