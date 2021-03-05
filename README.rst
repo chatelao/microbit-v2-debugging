@@ -66,6 +66,7 @@ HEX-Format
 
 - https://tech.microbit.org/software/hex-format/
 - https://en.wikipedia.org/wiki/Intel_HEX
+- https://tech.microbit.org/software/readout_hex/
 
 Appendix
 ##########################
