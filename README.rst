@@ -61,6 +61,12 @@ PlatformIO supports the debugging over the "DAP-Link" interface from
 Debugging with Arduino
 -----------------------
 
+HEX-Format
+##########
+
+- https://tech.microbit.org/software/hex-format/
+- https://en.wikipedia.org/wiki/Intel_HEX
+
 Appendix
 ##########################
 
