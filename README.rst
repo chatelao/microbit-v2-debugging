@@ -51,7 +51,7 @@ So a manual run can be started this way:
    cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles"
    make clean
    make -j 10 VERBOSE=1
-   
+
 Debugging with PlatformIO
 --------------------------
 
@@ -60,6 +60,14 @@ PlatformIO supports the debugging over the "DAP-Link" interface from
 
 Debugging with Arduino
 -----------------------
+
+Debugging with OpenOCD on a Virtualbox
+----------------------------------------------
+
+Because "normal" users don't have enough USB permissions, it is easier to run OpenOCD with sudo or as root.
+::
+
+   sudo openocd -f interface/cmsis-dap.cfg -f target/nrf52.cfg
 
 HEX-Format
 ##########
@@ -90,3 +98,16 @@ chip communication itself over USB to the PC/OpenOCD/GDB.
    :width: 800 px
 
 Source: https://tech.microbit.org/hardware/#hardware-block-diagram
+
+
+Adding to UDEV (untested)
+----------------------------
+
+I had the same problem (under Ubuntu 14.04). After much googling, I found this: openocd.udev, which shows the following udev rules for the CMSIS-DAP device:
+
+::
+   # mbed CMSIS-DAP
+   ATTRS{idVendor}=="0d28", ATTRS{idProduct}=="0204", MODE="664", GROUP="plugdev"
+   KERNEL=="hidraw*", ATTRS{idVendor}=="0d28", ATTRS{idProduct}=="0204", MODE="664", GROUP="plugdev"
+   
+After ensuring that my userid was a member of the plugdev group, I created a new udev rules file, /etc/udev/rules.d/98-blenano.rules, with these rules; then reloaded with $ sudo udevadm control --reload-rules, plugged in the MK20 device, and it worked.
