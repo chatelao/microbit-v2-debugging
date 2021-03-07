@@ -72,11 +72,14 @@ HEX-Format
 Appendix
 ##########################
 
-Hardware Overview
---------------------------
+Virtualbox USB filter
+---------------------
+
+.. image:: images/virtualbox-usbfilters.png
+   :width: 800 px
 
 Block Overview
---------------------------
+--------------
 
 The target of all debugging is the central MCU **NRF52833**
 running the software. The main CPU is debugged using a
