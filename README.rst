@@ -15,7 +15,7 @@ This repository shall explore the possibilities to debug the BBC microbit v2.
 Overview of the hardware capabilities
 --------------------------------------
 
-.. figure:: images/cmsis-dap.png
+.. figure:: images/microbit-v2-interface.png
    :width: 400 px
    
    Schema of a CMSIS-DAP debugger setup
