@@ -20,12 +20,6 @@ Overview of the hardware capabilities
    
    Schema of a CMSIS-DAP debugger setup
 
-1. With CODAL
-1. With PlatformIO
-1. With Arduino
-1. With MakeCode (fka PXT)
-
-
 Debugging with CODAL
 ----------------------
 
