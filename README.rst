@@ -54,7 +54,7 @@ PlatformIO supports the debugging over the "DAP-Link" interface from
 
 Install all tools you can grab from PlatformIO :-):
 ::
-   platformio platform install nordicnrf52 --with-all-packages
+   platformio platform install nordicnrf52 --with-package tool-openocd
 
 Debugging with Arduino
 -----------------------
