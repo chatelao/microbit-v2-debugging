@@ -52,6 +52,7 @@ Debugging with PlatformIO
 PlatformIO supports the debugging over the "DAP-Link" interface from 
 * https://docs.platformio.org/en/latest/boards/nordicnrf51/bbcmicrobit.html
 
+Install all tools you can grab from PlatformIO :-):
 ::
    platformio platform install nordicnrf52 --with-all-packages
 
